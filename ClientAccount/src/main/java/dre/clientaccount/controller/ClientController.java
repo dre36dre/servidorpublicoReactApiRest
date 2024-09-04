@@ -40,7 +40,6 @@ public class ClientController {
 		return result;
 	}
 	
-	
 	@PutMapping("/{id}")
 	public Client upDate(@PathVariable Long id, @RequestBody Client client) {
 		Client clientCurrent=repository.findById(id).get();
