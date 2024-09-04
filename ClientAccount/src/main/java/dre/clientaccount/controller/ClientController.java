@@ -33,14 +33,12 @@ public class ClientController {
 	public Client findById(@PathVariable Long id) {
 		return  repository.findById(id) .orElse(null);
 		
-	}
-	
+	}	
 	@PostMapping
 	public Client insert(@RequestBody Client client){
 		Client result= repository.save(client);
 		return result;
 	}
-	
 	
 	
 	@PutMapping("/{id}")
