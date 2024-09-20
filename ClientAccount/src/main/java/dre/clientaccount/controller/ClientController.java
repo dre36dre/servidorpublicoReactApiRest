@@ -27,8 +27,7 @@ public class ClientController {
 		List<Client> result= repository.findAll() ;
 		return result;
 		
-		}
-	
+		}	
 	@GetMapping(value= "/{id}")
 	public Client findById(@PathVariable Long id) {
 		return  repository.findById(id) .orElse(null);
