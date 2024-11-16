@@ -20,13 +20,12 @@ public interface ServidorPublicoAPIRest
 	@GetMapping("/listarServidor/{matricula}")
 	public ResponseEntity<ServidorPublico> listarServidor(@PathVariable long matricula);
 
+
 	@GetMapping("/excluirServidor/{matricula}")
 	public void excluirServidor(@PathVariable long matricula);
 	
 	@PutMapping("/editarServidor/{matricula}")
 	public String editarServidor(@PathVariable long matricula, @RequestBody  ServidorPublico servidor);
-	
-	
 	@PostMapping("/cadastrarServidor")
 	public String cadastrarServidor(@RequestBody ServidorPublico novoservidor);
 	
